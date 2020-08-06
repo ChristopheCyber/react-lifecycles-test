@@ -18,6 +18,7 @@ class App extends React.Component {
     return (
       <div className='App'>
         <header className='App-header'>
+          <h1> Tests with Components Life Cycles </h1>
           <img src={logo} className='App-logo' alt='logo' />
           <button
             onClick={() =>
