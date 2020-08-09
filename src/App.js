@@ -1,38 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import Lifecycles from './lifecycles.component';
+import Lifecycles from "./lifecycles.component";
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       showChild: true,
-      text: ''
+      text: "",
     };
   }
-
   render() {
+    const cl = console.log;
+    cl('dans render');
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <h1> Test Component Life Cycles on local branch master-lifecycles </h1>
-          <img src={logo} className='App-logo' alt='logo' />
+      <div className="App">
+        <header className="App-header">
+          <h4>
+            {" "} &lt; {'<'}
+            Test Component Life-Cycles on local branch master-lifecycles{" "}
+          </h4>
+          <img src={logo} className="App-logo" alt="logo" />
           <button
+            // onClick={() =>(
             onClick={() =>
-              this.setState(state => ({
-                showChild: !state.showChild
-              }))
+              this.setState({ showChild: !this.state.showChild }, () =>
+                cl("Toggle Clicked!")
+              )
             }
           >
             Toggle Lifecycles
           </button>
           <button
             onClick={() =>
-              this.setState(state => ({
-                text: state.text + '_hello'
+              this.setState((state2) => ({
+                text: state2.text + "_hello",
               }))
             }
           >

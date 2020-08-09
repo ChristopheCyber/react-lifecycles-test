@@ -17,10 +17,12 @@ class Lifecycles extends React.Component {
   componentWillUnmount() {
     console.log('componentWillUnmount!');
   }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    console.log('shouldComponentUpdate!', nextProps);
-    return nextProps.text !== this.props.text;
+  
+  shouldComponentUpdate(nextProps1, nextState) {
+    console.log('shouldComponentUpdate!',
+      nextProps1.text !== this.props.text ? nextProps1.text !== this.props.text : nextProps1.text !== this.props.text,
+      nextProps1);
+    return nextProps1.text !== this.props.text;
   }
 
   render() {
