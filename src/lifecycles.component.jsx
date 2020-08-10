@@ -19,8 +19,11 @@ class Lifecycles extends React.Component {
   }
   
   shouldComponentUpdate(nextProps1, nextState) {
+    console.log('True = ',(1!==2).toString());
     console.log('shouldComponentUpdate!',
-      nextProps1.text !== this.props.text ? nextProps1.text !== this.props.text : nextProps1.text !== this.props.text,
+      nextProps1.text !== this.props.text ? 
+        "Y "+ (nextProps1.text !== this.props.text).toString(): 
+        "N "+ (nextProps1.text !== this.props.text).toString(),
       nextProps1);
     return nextProps1.text !== this.props.text;
   }

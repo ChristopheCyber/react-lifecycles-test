@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
 import Lifecycles from "./lifecycles.component";
 
 class App extends React.Component {
@@ -14,14 +13,15 @@ class App extends React.Component {
     };
   }
   render() {
+    //Customized shorthand 'cl'
     const cl = console.log;
     cl('dans render');
     return (
       <div className="App">
         <header className="App-header">
           <h4>
-            {" "} &lt; {'<'}
-            Test Component Life-Cycles on local branch master-lifecycles{" "}
+            {" "} &lt; 
+            Test Component Life-Cycles on local branch master-lifecycles &gt; {" "}
           </h4>
           <img src={logo} className="App-logo" alt="logo" />
           <button
